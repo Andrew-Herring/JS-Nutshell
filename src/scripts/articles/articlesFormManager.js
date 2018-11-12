@@ -2,6 +2,7 @@ const articlesFormManager = {
   htmlForm: () => {
     return `
     <div>
+    <h2>Articles</h2>
     Title:<br>
     <input type="text" name="Title" id="articlesTitle"><br>
     URL:<br>

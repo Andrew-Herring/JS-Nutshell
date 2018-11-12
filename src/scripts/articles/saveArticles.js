@@ -1,18 +1,19 @@
 import { articlesDataManager } from "./articlesDataManager"
 import { articlesFormManager } from "./articlesFormManager"
 import { articlesDomRender } from "./articlesDomRender"
+import { timeStamp } from "../date/timeStamp"
 
 const saveArticles = (activeUser) => {
   document.querySelector("#articlesInput").addEventListener("click", (evt) => {
     const entry = {
       title: document.querySelector("#articlesTitle").value,
-      content: document.querySelector("#articlesUrl").value,
+      url: document.querySelector("#articlesUrl").value,
       synopsis: document.querySelector("#articlesSynopsis").value,
-      // timestamp:
+      timestamp: timeStamp()
     }
     if (evt.target.id.startsWith("articlesSave")) {
-      if (!entry.title || !entry.content || !entry.synopsis) {
-        alert("Please fill out the form")
+      if (!entry.title || !entry.url || !entry.synopsis) {
+        alert("Please fill out the article")
       } else {
         articlesDataManager.saveEntry(entry).then(() => {
           articlesFormManager.clearForm()
