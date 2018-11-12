@@ -2,7 +2,7 @@ import {profileDataManager} from "./profileDataManager"
 import {htmlProfile} from "./htmlProfile"
 
 const dom = (entry) => {
-  document.querySelector("#profileOutput").innterHTML += entry
+  document.querySelector("#profileOutput").innerHTML += entry
 }
 
 const profileDomRender = (activeUser) => {

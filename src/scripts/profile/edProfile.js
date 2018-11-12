@@ -13,11 +13,11 @@ const edProfile = (activeUser) => {
       const id = evt.target.id.split("!")[1]
       document.querySelector("#saveBtn").id = `editBtn!${id}`
       profileDataManager.singleEntry(id).then((entry) => {
-        document.querySelector("#contact").value = entry.title
-        document.querySelector("#phone").value = entry.content
-        document.querySelector("#city").value = entry.date
-        document.querySelector("#about").value = entry.mood
-        document.querySelector("#secret").value = entry.mood
+        document.querySelector("#contact").value = entry.contact
+        document.querySelector("#phone").value = entry.phone
+        document.querySelector("#city").value = entry.city
+        document.querySelector("#about").value = entry.about
+        document.querySelector("#secret").value = entry.secret
 
 
       })

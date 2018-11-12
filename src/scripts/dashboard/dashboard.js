@@ -20,8 +20,8 @@ const dashboard = (activeUser) => {
       logout()
     })
   //put all your modules here 
-  messages()
-    // journal(activeUser)
+  
+    messages()
     profile(activeUser)
   }
 }
