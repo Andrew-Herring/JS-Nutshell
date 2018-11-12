@@ -4,6 +4,7 @@ import { auth } from "../auth/auth";
 import {logout} from "../auth/logout";
 import {navHtml} from "../nav/navHtml";
 import {getUserName} from "../auth/getUserName";
+import { profile } from "../profile/profile";
 
 const dashboard = (activeUser) => {
   //if no active user take to auth
@@ -19,7 +20,7 @@ const dashboard = (activeUser) => {
     })
   //put all your modules here 
     // journal(activeUser)
-    
+    profile(activeUser)
   }
 }
 
