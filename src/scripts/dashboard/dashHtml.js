@@ -1,11 +1,17 @@
 const dashHtml = () => {
   // <!-- //come back and change classes for styling  -->
+  //come back and change classes for styling
   return `
   <nav></nav>
   <h1>Welcome G-popi</h1>
   <div class="container" id="messages">
+<<<<<<< HEAD
     <div id="messagesInput"></div>
     <div id="messagesOutput"></div>
+=======
+    <div id="messagesOutput"></div>
+    <div id="messagesInput"></div>
+>>>>>>> master
   </div>
   <div class="container" id="tasks">
     <div id="tasksInput"></div>

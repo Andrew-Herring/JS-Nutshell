@@ -10,3 +10,5 @@ const navHtml = (username)=>{
   }
 
   export {navHtml}
+
+  export {navHtml}

@@ -20,7 +20,7 @@
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "quotes": ["error", "double"],
-        "no-trailing-spaces": 2
+        "no-trailing-spaces": 0
     },
     "globals": {
         "$": true
