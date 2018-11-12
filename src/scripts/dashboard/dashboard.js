@@ -6,6 +6,7 @@ import {logout} from "../auth/logout";
 import {navHtml} from "../nav/navHtml";
 import {getUserName} from "../auth/getUserName";
 import { profile } from "../profile/profile";
+import {articles} from "../articles/articles"
 
 const dashboard = (activeUser) => {
   //if no active user take to auth
@@ -23,6 +24,11 @@ const dashboard = (activeUser) => {
   
     messages()
     profile(activeUser)
+  //put all your modules here
+  messages()
+    // journal(activeUser)
+  articles(activeUser)
+
   }
 }
 
