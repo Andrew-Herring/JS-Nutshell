@@ -16,10 +16,9 @@ const tasksFormManager = {
   },
   //will clear the form  after the user has submitted a task
   clearForm: () => {
-    document.querySelector("#title").value = ""
-    document.querySelector("#content").value = ""
+    document.querySelector("#taskName").value = ""
+    document.querySelector("#description").value = ""
     document.querySelector("#date").value = ""
-    document.querySelector("#mood").value = ""
   }
 }
 

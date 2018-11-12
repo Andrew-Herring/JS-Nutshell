@@ -1,5 +1,7 @@
 import {tasksDataManager} from "./tasksDataManager"
 import {tasksFormManager} from "./tasksFormManager"
+import {tasksDomRender} from "./tasksDomRender";
+
 
 const saveTask = (activeUser) => {
   document.querySelector("#tasksInput").addEventListener("click", (event) => {
@@ -14,15 +16,22 @@ const saveTask = (activeUser) => {
         alert("please fill out full form!")
       } else {
         //save the info            then once the promise is fufilled
-        tasksDataManager.saveTask(event).then(() => {
+        tasksDataManager.saveTask(entry).then(() => {
           //clear all inputs
-          formManager.clearForm()
+          tasksFormManager.clearForm()
           //and post it to the DOM
-          // TODO:domRender(activeUser)
+          tasksDomRender(activeUser)
         })
       }
     }
-    //TODO: add edit btn functionality 
+    if (event.target.id.startsWith("editBtn")) {
+      const id = event.target.id.split("!")[1]
+      tasksDataManager.editTask(entry, id).then(() => {
+        tasksFormManager.clearForm()
+        tasksDomRender(activeUser)
+        document.getElementById(`editBtn!${id}`).id = "saveBtn"
+      })
+    }
   })
 }
 
