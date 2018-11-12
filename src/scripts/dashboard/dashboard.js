@@ -1,5 +1,5 @@
 import {dashHtml} from "./dashHtml"
-// import {journal} from "../journal/journal"
+import {tasks} from "../tasks/tasks"
 import { auth } from "../auth/auth";
 import {logout} from "../auth/logout";
 import {navHtml} from "../nav/navHtml";
@@ -17,8 +17,10 @@ const dashboard = (activeUser) => {
       document.querySelector("nav").innerHTML = navHtml(username)
       logout()
     })
+
+
   //put all your modules here 
-    // journal(activeUser)
+    tasks(activeUser)
     
   }
 }
