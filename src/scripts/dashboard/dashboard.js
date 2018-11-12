@@ -1,4 +1,5 @@
 import {dashHtml} from "./dashHtml"
+import {messages} from "../messages/messages"
 // import {journal} from "../journal/journal"
 import { auth } from "../auth/auth";
 import {logout} from "../auth/logout";
@@ -18,6 +19,7 @@ const dashboard = (activeUser) => {
       logout()
     })
   //put all your modules here 
+  messages()
     // journal(activeUser)
     
   }
