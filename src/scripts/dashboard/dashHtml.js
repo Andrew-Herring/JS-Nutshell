@@ -1,6 +1,5 @@
 const dashHtml = () => {
-  // <!-- //come back and change classes for styling  -->
-  //come back and change classes for styling
+// dashHtml returns the literal HTML representation of all containers that will hold each module
   return `
   <nav></nav>
   <h1>Welcome G-popi</h1>

@@ -1,4 +1,5 @@
 const authFormManager = {
+  // the authForm function contains the HTML representation of the login and registration screen.
   authForm: () => {
       return `
       <div class="text-center"  id="welcome">
@@ -13,6 +14,7 @@ const authFormManager = {
       <button type="button" class="btn btn-secondary" id="loginBtn">Login</button>
       </div>`
   },
+  // clearAuthForm function clears the values from the form
   clearAuthForm: () => {
       document.querySelector("#username").value = ""
       document.querySelector("#psw").value = ""
