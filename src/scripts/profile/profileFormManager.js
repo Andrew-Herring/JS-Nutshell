@@ -5,15 +5,15 @@ const profileFormManager = {
     <div>
     <h2>Your Friends' info!</h2>
     Contact:<br>
-    <input type="text" name="Contact" placeholder="Persons name" id="contact"><br>
+    <input type="text" name="Contact" id="contact"><br>
     Phone:<br>
-    <input type="text" name="Phone" placeholder="Phone Number" id="phone"><br>
+    <input type="text" name="Phone" id="phone"><br>
     City:<br>
-    <input type="text" name="City" placeholder="Where are they from?" id="city"><br>
+    <input type="text" name="City" id="city"><br>
     About:<br>
-    <input type="text" name="About" placeholder="Who is this person?" id="about"><br>
+    <textarea rows="3" cols="20" name="About" id="about"></textarea><br>
     Secret:<br>
-    <input type="text" name="Secret" placeholder="Throw some shade" id="secret"><br>
+    <textarea rows="3" cols="20" type="text" name="Secret" id="secret"></textarea><br>
     <button id="saveBtnProfile">Save Person</button>
     </div>`
   },
