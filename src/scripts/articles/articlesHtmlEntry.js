@@ -1,3 +1,5 @@
+// articlesHtmlEntry is the literal HTML code that will be displayed in the DOM once the JSON entries are retrieved. "entry" will represent each unique article object passed from JSON to the DOM.
+// Includes buttons for Edit and Delete. Each button will grab the unique entry id for the targeted click.  This id is used so that js knows which article to edit or delete.
 const articlesHtmlEntry = (entry) => {
   return `
   <div>
@@ -5,10 +7,11 @@ const articlesHtmlEntry = (entry) => {
   <a href ="${entry.url}">${entry.url}</a>
   <p>${entry.synopsis}</p>
   <p>${entry.timestamp}</p>
-  <button id="articlesEdit!${entry.id}">Edit</button>
-  <button id="articlesDelete!${entry.id}">Delete</button>
+  <button id="editArticles!${entry.id}">Edit</button>
+  <button id="deleteArticles!${entry.id}">Delete</button>
   </div>
   `
 }
 
+// The articlesHtmlEntry function is exported for use in other functions.
 export {articlesHtmlEntry}

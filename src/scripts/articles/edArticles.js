@@ -3,15 +3,15 @@ import { articlesDomRender } from "./articlesDomRender"
 
 const edArticles = (activeUser) => {
   document.querySelector("#articlesOutput").addEventListener("click", (evt) => {
-    if (evt.target.id.startsWith("articlesDelete")) {
+    if (evt.target.id.startsWith("deleteArticles")) {
       const id = evt.target.id.split("!")[1]
       articlesDataManager.deleteEntries(id).then(() =>
         articlesDomRender(activeUser)
       )
     }
-    if (evt.target.id.startsWith("articlesEdit")) {
+    if (evt.target.id.startsWith("editArticles")) {
       const id = evt.target.id.split("!")[1]
-      document.querySelector("#articlesSaveBtn").id = `articlesEditBtn!${id}`
+      document.querySelector("#saveArticlesBtn").id = `editArticlesBtn!${id}`
       articlesDataManager.singleEntry(id).then((entry) => {
         document.querySelector("#articlesTitle").value = entry.title
         document.querySelector("#articlesUrl").value = entry.url

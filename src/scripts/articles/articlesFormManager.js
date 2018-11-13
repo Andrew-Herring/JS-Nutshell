@@ -11,7 +11,7 @@ const articlesFormManager = {
     <input type="url" name="URL" id="articlesUrl"><br>
     Synopsis:<br>
     <textarea rows="4" cols="50" id="articlesSynopsis"></textarea><br>
-    <button id="articlesSaveBtn">Save</button>
+    <button id="saveArticlesBtn">Save</button>
     </div>
     `
   },

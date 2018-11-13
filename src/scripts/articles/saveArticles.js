@@ -11,7 +11,7 @@ const saveArticles = (activeUser) => {
       synopsis: document.querySelector("#articlesSynopsis").value,
       timestamp: timeStamp()
     }
-    if (evt.target.id.startsWith("articlesSave")) {
+    if (evt.target.id.startsWith("saveArticles")) {
       if (!entry.title || !entry.url || !entry.synopsis) {
         alert("Please fill out the article")
       } else {
@@ -21,12 +21,12 @@ const saveArticles = (activeUser) => {
         })
       }
     }
-    if (evt.target.id.startsWith("articlesEdit")) {
+    if (evt.target.id.startsWith("editArticles")) {
       const id = evt.target.id.split("!")[1]
       articlesDataManager.editEntry(entry, id).then(() => {
         articlesFormManager.clearForm()
         articlesDomRender(activeUser)
-        document.getElementById(`articlesEditBtn!${id}`).id = "articlesSaveBtn"
+        document.getElementById(`editArticlesBtn!${id}`).id = "saveArticlesBtn"
       })
     }
   })
