@@ -1,4 +1,5 @@
 import {dashHtml} from "./dashHtml"
+import { event } from "../events/events"
 import {messages} from "../messages/messages"
 // import {journal} from "../journal/journal"
 import { auth } from "../auth/auth";
@@ -20,16 +21,19 @@ const dashboard = (activeUser) => {
       document.querySelector("nav").innerHTML = navHtml(username)
       logout()
     })
-  //put all your modules here 
-  
+  //put all your modules here
+
     messages()
     profile(activeUser)
   //put all your modules here
-  
+    event(activeUser)
+
     // journal(activeUser)
     articles(activeUser)
 
   }
 }
+
+
 
 export {dashboard}
