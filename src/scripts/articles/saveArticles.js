@@ -1,8 +1,10 @@
+// Import functions from other JS files for use in the functions below.
 import { articlesDataManager } from "./articlesDataManager"
 import { articlesFormManager } from "./articlesFormManager"
 import { articlesDomRender } from "./articlesDomRender"
 import { timeStamp } from "../date/timeStamp"
 
+//The saveArticles function contains functionality for saving form values to JSON.  The activeUser is passed in
 const saveArticles = (activeUser) => {
   document.querySelector("#articlesInput").addEventListener("click", (evt) => {
     const entry = {
