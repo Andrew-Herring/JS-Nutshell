@@ -4,8 +4,9 @@ import { articlesFormManager } from "./articlesFormManager"
 import { articlesDomRender } from "./articlesDomRender"
 import { timeStamp } from "../date/timeStamp"
 
-//The saveArticles function contains functionality for saving form values to JSON.  The activeUser is passed in
+//The saveArticles function contains functionality for saving form values to JSON.  The activeUser is passed in through an argument so that the user ID is passed into the article entry.
 const saveArticles = (activeUser) => {
+  // click event
   document.querySelector("#articlesInput").addEventListener("click", (evt) => {
     const entry = {
       title: document.querySelector("#articlesTitle").value,
