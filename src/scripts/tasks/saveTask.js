@@ -2,7 +2,6 @@ import {tasksDataManager} from "./tasksDataManager"
 import {tasksFormManager} from "./tasksFormManager"
 import {tasksDomRender} from "./tasksDomRender";
 
-
 const saveTask = (activeUser) => {
   document.querySelector("#tasksInput").addEventListener("click", (event) => {
     const entry = {

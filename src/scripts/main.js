@@ -4,5 +4,3 @@ const activeUser = parseInt(sessionStorage.getItem("activeUser"))
 dashboard(activeUser)
 
 
-console.log(activeUser)
-

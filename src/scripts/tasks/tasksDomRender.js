@@ -9,12 +9,12 @@ const tasksDomRender = (activeUser) => {
   //the next line will clear the dom so that it does not repeat any inputs
   document.querySelector("#tasksOutput").innerHTML = ""
   tasksDataManager.getTask(activeUser)
-  .then(entries =>{
-    entries.forEach(entry => {
-      const entryHtml = taskHtmlEntry(entry)
-      dom(entryHtml) 
+    .then(entries => {
+      entries.forEach(entry => {
+        const entryHtml = taskHtmlEntry(entry)
+        dom(entryHtml)
+      })
     })
-  })
 }
 
 export {tasksDomRender}
