@@ -1,4 +1,6 @@
+// articlesFormManager is an object used to store functions for loading and clearing the input form.
 const articlesFormManager = {
+// htmlForm contains the literal HTML that will be passed to the DOM for input. Includes inputs and id's that will be later used to capture values and pass to JSON.
   htmlForm: () => {
     return `
     <div>
@@ -13,11 +15,12 @@ const articlesFormManager = {
     </div>
     `
   },
+  // clearForm is used to clear the form values after the form is saved.
   clearForm: () => {
     document.querySelector("#articlesTitle").value = ""
     document.querySelector("#articlesUrl").value = ""
     document.querySelector("#articlesSynopsis").value = ""
   }
 }
-
+// The articlesFormManager object is exported for use in other functions.
 export { articlesFormManager }
