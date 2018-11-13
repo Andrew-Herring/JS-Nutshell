@@ -9,6 +9,6 @@ const navHtml = (username)=>{
   </ul>`
   }
 
-  export {navHtml}
+
 
   export {navHtml}

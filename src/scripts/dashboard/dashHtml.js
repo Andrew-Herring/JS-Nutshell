@@ -5,13 +5,14 @@ const dashHtml = () => {
   <nav></nav>
   <h1>Welcome G-popi</h1>
   <div class="container" id="messages">
-<<<<<<< HEAD
+
     <div id="messagesInput"></div>
     <div id="messagesOutput"></div>
-=======
+
     <div id="messagesOutput"></div>
+
+    <div id="messagesOutput" style="overflow-y:auto"></div>
     <div id="messagesInput"></div>
->>>>>>> master
   </div>
   <div class="container" id="tasks">
     <div id="tasksInput"></div>

@@ -6,6 +6,7 @@ import { auth } from "../auth/auth";
 import {logout} from "../auth/logout";
 import {navHtml} from "../nav/navHtml";
 import {getUserName} from "../auth/getUserName";
+import { profile } from "../profile/profile";
 import {articles} from "../articles/articles"
 
 const dashboard = (activeUser) => {
@@ -20,6 +21,10 @@ const dashboard = (activeUser) => {
       document.querySelector("nav").innerHTML = navHtml(username)
       logout()
     })
+  //put all your modules here
+
+    messages()
+    profile(activeUser)
   //put all your modules here
     event(activeUser)
   messages()
