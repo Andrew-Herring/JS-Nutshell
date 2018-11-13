@@ -1,7 +1,7 @@
 
 const htmlMessage = (message) => {
     return `
-    <div styly="color:blue">
+    <div>
     <p>${message.content}</p>
     <p>${message.date}</p>
     <button id="delete!${message.id}">Delete</button>

@@ -27,9 +27,9 @@ const dashboard = (activeUser) => {
     profile(activeUser)
   //put all your modules here
     event(activeUser)
-  messages()
+
     // journal(activeUser)
-  articles(activeUser)
+    articles(activeUser)
 
   }
 }
