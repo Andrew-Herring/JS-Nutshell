@@ -10,7 +10,19 @@ const edTask = (activeUser) => {
          tasksDomRender(activeUser)
        )
      }
-     //TODO:throw your edit functionallity 
-
+     //edit functionallity 
+     if (event.target.id.startsWith("edit")) {
+      //this will take id and the split will break the id up into an array
+       const id = event.target.id.split("!")[1]
+       document.querySelector("#taskSaveBtn").id = `editBtn!${id}`
+       tasksDataManager.singleEntry(id).then((entry) => {
+         //change our values 
+         document.querySelector("#taskName").value = entry.task
+         document.querySelector("#description").value = entry.description
+         document.querySelector("#date").value = entry.dueDate         
+       })
+     }
   })
 }
+
+export {edTask}

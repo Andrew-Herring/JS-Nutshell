@@ -2,11 +2,11 @@
 const taskHtmlEntry = (entry) => {
   return `
   <div>
-  <h3>${entry.taskName}</h3>
+  <h3>${entry.task}</h3>
   <p>${entry.description}</p>
-  <p>${entry.date}</p>
+  <p>${entry.dueDate}</p>
   <button id="delete!${entry.id}">Delete</button>
-  <button id="edit!${entry.id}">Edit</button>
+  <button id="editTask!${entry.id}">Edit</button>
   </div>`
 }
 

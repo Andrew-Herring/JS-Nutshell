@@ -29,7 +29,7 @@ const saveTask = (activeUser) => {
       tasksDataManager.editTask(entry, id).then(() => {
         tasksFormManager.clearForm()
         tasksDomRender(activeUser)
-        document.getElementById(`editBtn!${id}`).id = "saveBtn"
+        document.getElementById(`editBtn!${id}`).id = "taskSaveBtn"
       })
     }
   })
