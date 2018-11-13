@@ -8,9 +8,9 @@ const dom = (message) => {
 }
 
 
-const domRender = () => {
+const domRender = (activeUser) => {
     document.querySelector("#messagesOutput").innerHTML = ""
-    messageDataManager.getMessages()
+    messageDataManager.getMessages(activeUser)
         .then(messages=> {
             messages.forEach(message => {
                 const messageHtml = htmlMessage(message)

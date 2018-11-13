@@ -5,7 +5,7 @@ import { domRender } from "./messageDomRender"
 import { timeStamp} from "../date/timeStamp"
 
 // naming a function that has a event listener on click
-const saveMessage = () => {
+const saveMessage = (activeUser) => {
     document.querySelector("#messagesInput").addEventListener("click", (evt) => {
         
 // variable message is getting the input value as a promise after the click
@@ -19,9 +19,17 @@ const saveMessage = () => {
         } else {
             messageDataManager.saveMessage(message).then(() => {
                 messageForm.clearForm()
-                domRender()
+                domRender(activeUser)
             })
         }
+    }
+    if (evt.target.id.startsWith("editMessage")) {
+        const id = evt.target.id.split("!")[1]
+        messageDataManager.editMessage(message, id).then(() => {
+            messageForm.clearForm()
+            domRender(activeUser)
+            document.getElementById(`editMessageBtn!${id}`).id = "sendBtn"
+        })
     }
     })
 }

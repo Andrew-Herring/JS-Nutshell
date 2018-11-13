@@ -6,11 +6,11 @@ import { editMessage } from "./editMessage"
 
 
 // adding the functions to work on the dom with inner html
-const messages = () => {
+const messages = (activeUser) => {
     document.querySelector("#messagesInput").innerHTML = messageForm.htmlForm()
-    domRender()
-    saveMessage()
-    editMessage()
+    domRender(activeUser)
+    saveMessage(activeUser)
+    editMessage(activeUser)
 
 
 }
