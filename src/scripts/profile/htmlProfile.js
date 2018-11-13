@@ -1,3 +1,4 @@
+// how the entries are represented on the DOM
 const htmlProfile = (entry) => {
   return `
   <div>
@@ -6,8 +7,8 @@ const htmlProfile = (entry) => {
   <p>${entry.city}</p>
   <p>${entry.about}</p>
   <p>${entry.secret}</p>
-  <button id="delete!${entry.id}">Delete Person</button>
-  <button id="edit!${entry.id}">Edit Details</button>
+  <button id="deleteProfile!${entry.id}">Delete Person</button>
+  <button id="editProfile!${entry.id}">Edit Details</button>
   </div>`
 }
 
