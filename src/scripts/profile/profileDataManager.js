@@ -1,4 +1,6 @@
+// store the database in a variable
 const url = "http://localhost:3000/profiles"
+// functions that handle events, fetch, save, delete, and edit
 const profileDataManager = {
   getEntries: (id) => {
       return fetch(`${url}?userId=${id}`)
