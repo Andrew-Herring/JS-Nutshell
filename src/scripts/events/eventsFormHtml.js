@@ -3,6 +3,7 @@ const eventsFormHtml = {
   htmlForm: () => {
       return `<div>
 Name:<br>
+<h2>Events</h2>
 <input type="text" name="Name" id="name"><br>
 Date:<br>
 <input type="datetime-local" name="Date" id="date"><br>
