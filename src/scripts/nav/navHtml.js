@@ -1,3 +1,5 @@
+// navHtml is the literal representation that is passed into the DOM.  Includes the username that will be passed in along with the logout
+
 const navHtml = (username)=>{
   return `<ul class="nav justify-content-end">
     <li class="nav-item">
