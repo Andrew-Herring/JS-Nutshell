@@ -1,13 +1,14 @@
+// importing all functions from other modules
 import { messageDataManager } from "./messageDataManager"
 import { messageForm } from "./messageForm"
 import { domRender } from "./messageDomRender"
 import { timeStamp} from "../date/timeStamp"
 
-
-
-
+// naming a function that has a event listener on click
 const saveMessage = () => {
     document.querySelector("#messagesInput").addEventListener("click", (evt) => {
+        
+// variable message is getting the input value as a promise after the click
         const message = {
             content: document.querySelector("#content").value,
             date: timeStamp()

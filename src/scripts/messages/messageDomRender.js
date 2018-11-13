@@ -1,9 +1,12 @@
 import {messageDataManager} from "./messageDataManager"
 import {htmlMessage} from "./htmlMessage"
 
+
+// targeting html id of messagesOutput to put in the dom
 const dom = (message) => {
     document.querySelector("#messagesOutput").innerHTML += message
 }
+
 
 const domRender = () => {
     document.querySelector("#messagesOutput").innerHTML = ""
