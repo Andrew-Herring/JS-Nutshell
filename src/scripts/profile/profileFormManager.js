@@ -1,7 +1,9 @@
+//Form that is displayed for entering information
 const profileFormManager = {
   profileForm: () => {
     return `
     <div>
+    <h2>Your Friends' info!</h2>
     Contact:<br>
     <input type="text" name="Contact" placeholder="Persons name" id="contact"><br>
     Phone:<br>
@@ -11,10 +13,11 @@ const profileFormManager = {
     About:<br>
     <input type="text" name="About" placeholder="Who is this person?" id="about"><br>
     Secret:<br>
-    <input type="text" name="Secret" placeholder="What's the skinny" id="secret"><br>
-    <button id="saveBtn">Save Person</button>
+    <input type="text" name="Secret" placeholder="Throw some shade" id="secret"><br>
+    <button id="saveBtnProfile">Save Person</button>
     </div>`
   },
+  // clears form after entry to avoid repeat entires
     clearForm: () => {
       document.querySelector("#contact").value = ""
       document.querySelector("#phone").value = ""
