@@ -6,12 +6,7 @@ const dashHtml = () => {
   <h1>Welcome G-popi</h1>
   <div class="container" id="messages">
 
-    <div id="messagesInput"></div>
-    <div id="messagesOutput"></div>
-
-    <div id="messagesOutput"></div>
-
-    <div id="messagesOutput" style="overflow-y:auto"></div>
+  <div id="messagesOutput"></div>
     <div id="messagesInput"></div>
   </div>
   <div class="container" id="tasks">
