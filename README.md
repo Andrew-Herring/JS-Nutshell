@@ -17,7 +17,7 @@ The Nutshell website is where individual users can see their profile, tasks, eve
 -----
 
 ## Entity Relationship Diagram
-![LUCKY PROFESSIONALS ERD](api\nutshellERD.png "Lucky Professionals ERD")
+![LUCKY PROFESSIONALS ERD](ERD\nutshellERD.png "Lucky Professionals ERD")
 
 -----
 
