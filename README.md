@@ -17,7 +17,7 @@ The Nutshell website is where individual users can see their profile, tasks, eve
 -----
 
 ## Entity Relationship Diagram
-![LUCKY PROFESSIONALS ERD](api\.nutshellERD.png "Lucky Professionals ERD")
+![LUCKY PROFESSIONALS ERD](api\nutshellERD.png "Lucky Professionals ERD")
 
 -----
 
@@ -25,7 +25,7 @@ The Nutshell website is where individual users can see their profile, tasks, eve
 ### Team Lead
 - [Sam Webber](https://github.com/buffard)
 
-### API Developers
+### Software Developers
 - [Noah Woods](https://github.com/noahwoods)
 - [John Wood](https://github.com/johnnathanwood)
 - [Andy Herring](https://github.com/Andrew-Herring)
