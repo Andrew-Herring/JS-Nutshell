@@ -29,6 +29,15 @@ const profileDataManager = {
           body: JSON.stringify(entry)
       }).then(res => res.json());
   },
+  FavEntry: (entry, id) => {
+    return fetch(`${url}/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    }).then(res => res.json());
+},
   singleEntry: (id) => {
       return fetch(`${url}/${id}`)
           .then(res => res.json())

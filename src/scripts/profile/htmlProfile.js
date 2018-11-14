@@ -9,6 +9,7 @@ const htmlProfile = (entry) => {
   <p>${entry.secret}</p>
   <button id="deleteProfile!${entry.id}">Delete Person</button>
   <button id="editProfile!${entry.id}">Edit Details</button>
+  <button id="favBtn!${entry.id}">Favorite</button>
   </div>`
 }
 
