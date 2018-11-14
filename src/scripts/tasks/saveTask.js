@@ -7,7 +7,8 @@ const saveTask = (activeUser) => {
     const entry = {
       task: document.querySelector("#taskName").value,
       description: document.querySelector("#description").value,
-      dueDate: document.querySelector("#date").value
+      dueDate: document.querySelector("#date").value,
+      completed: false
     }
     if (event.target.id.startsWith("taskSaveBtn")) {
       //this will check to make sure all inputs are filled out before saving to our database
