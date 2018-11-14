@@ -1,5 +1,6 @@
-import {messageDataManager} from "./messageDataManager"
-import {htmlMessage} from "./htmlMessage"
+import { messageDataManager } from "./messageDataManager"
+import { htmlMessage } from "./htmlMessage"
+import { htmlBasic } from "./htmlBasic"
 
 
 // targeting html id of messagesOutput to put in the dom
@@ -8,15 +9,20 @@ const dom = (message) => {
 }
 
 
-const domRender = () => {
+const domRender = (activeUser) => {
     document.querySelector("#messagesOutput").innerHTML = ""
     messageDataManager.getMessages()
         .then(messages=> {
             messages.forEach(message => {
-                const messageHtml = htmlMessage(message)
+                let messageHtml = ""
+                if (message.userId === activeUser) {
+                    messageHtml += htmlMessage(message)
+                } else {
+                    messageHtml += htmlBasic(message) 
+                } 
                 dom(messageHtml)
             })
         })
-}
+    }
 
 export { domRender }
