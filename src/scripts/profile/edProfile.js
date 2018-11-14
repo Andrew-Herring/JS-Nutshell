@@ -30,13 +30,16 @@ const edProfile = (activeUser) => {
     }
     // fav button
     if (evt.target.id.startsWith("favBtn")) {
-      profileDataManager.FavEntry().then((entry) => {
         const id = evt.target.id.split("!")[1]
-        const fav = {"favorite": true}
-        profileDataManager.FavEntry(fav, id).then(() => {
-          profileDomRender(activeUser)
+        profileDataManager.singleEntry(id).then((entry) => {
+          let fav = {"favorite":  entry.favorite}
+          fav = {"favorite": !entry.favorite}
+          profileDataManager.FavEntry(fav, id).then(() => {
+            profileDomRender(activeUser)
+          })
         })
-      })
+
+      
     }
   })
 }
