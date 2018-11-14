@@ -4,9 +4,10 @@ const url = "http://localhost:3000/messages"
 // declaring variable for fetch calls
 const messageDataManager = {
 // getting data from database
-    getMessages: (id) => {
-        return fetch(`${url}?userId=${id}`)
+    getMessages: () => {
+        return fetch(`${url}?_expand=user`)
             .then(res => res.json())
+            // .then((a) => console.log(a)) 
     },
 // posting data to database
     saveMessage: (message) => {
@@ -37,7 +38,7 @@ const messageDataManager = {
     singleMessage: (id) => {
         return fetch(`${url}/${id}`)
             .then(res => res.json())
-    }
+    },
 }
 
 // export variable so other modules can use the fetch functions 
