@@ -38,7 +38,7 @@ const edProfile = (activeUser) => {
             profileDomRender(activeUser)
           })
         })
-        
+
       
     }
   })

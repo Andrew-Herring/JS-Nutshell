@@ -12,7 +12,6 @@ const domRender = () => {
     document.querySelector("#messagesOutput").innerHTML = ""
     messageDataManager.getMessages()
         .then(messages=> {
-            console.log(messages)
             messages.forEach(message => {
                 const messageHtml = htmlMessage(message)
                 dom(messageHtml)

@@ -3,7 +3,7 @@ const htmlProfile = (entry) => {
   return `
   <div>
   <h2>${entry.contact}</h2>
-  <h3>${entry.favorite}</h3>
+  <h4 id="fav"></h4>
   <p>${entry.phone}</p>
   <p>${entry.city}</p>
   <p>${entry.about}</p>
