@@ -4,12 +4,12 @@ const tasksFormManager = {
     return `
     <div>
       <h2>My Task List</h2>
-      Task:<br>
-      <input type="text" name="Task" id="taskName"><br>
-      Description:<br>
-      <input type="textarea" name="Description" id="description"><br>
-      Due Date:<br>
-      <input type="date" name="Date" id="date"><br>
+      Task:
+      <input type="text" name="Task" id="taskName">
+      Description:
+      <input type="textarea" name="Description" id="description">
+      Due Date:
+      <input type="date" name="Date" id="date">
       <button id="taskSaveBtn">Save</button>
     </div>
     `
