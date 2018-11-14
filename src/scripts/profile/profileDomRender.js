@@ -12,6 +12,12 @@ const profileDomRender = (activeUser) => {
     entries.forEach(entry => {
       const entryHtml = htmlProfile(entry)
       dom(entryHtml)
+      if (entry.favorite === true) {
+        document.querySelector("#fav").innerHTML = "Saved as Favorite"
+      }
+      else {
+        document.querySelector("#fav").innerHTML = ""
+      }
     })
   })
 }
