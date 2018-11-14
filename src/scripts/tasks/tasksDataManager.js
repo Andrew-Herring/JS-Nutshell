@@ -3,7 +3,7 @@ const tasksUrl = "http://localhost:3000/tasks"
 //house all functions that interact with the database
 const tasksDataManager = {
   getTask: (id) => {
-    return fetch(`${tasksUrl}?userId=${id}`)
+    return fetch(`${tasksUrl}?userId=${id}&completed=false`)
       .then(res => res.json())
   },
   saveTask: (entry) => {
@@ -32,6 +32,16 @@ const tasksDataManager = {
   singleEntry: (id) => {
     return fetch(`${tasksUrl}/${id}`)
       .then(res => res.json())
+  },
+//TODO:this will be for your checkbox
+  completeTask: (entry, id) => {
+    return fetch(`${tasksUrl}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(entry)
+    })
   }
 }
 
