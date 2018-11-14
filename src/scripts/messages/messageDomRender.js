@@ -12,8 +12,7 @@ const dom = (message) => {
 const domRender = (activeUser) => {
     document.querySelector("#messagesOutput").innerHTML = ""
     messageDataManager.getMessages()
-        .then(messages => {
-            console.log(messages)
+        .then(messages=> {
             messages.forEach(message => {
                 let messageHtml = ""
                 if (message.userId === activeUser) {
