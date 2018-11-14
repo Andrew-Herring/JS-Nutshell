@@ -2,11 +2,10 @@ import {profileDataManager} from "./profileDataManager"
 import {profileDomRender} from "./profileDomRender"
 // edit and delete functions
 
-// delete an entry
 const edProfile = (activeUser) => {
   document.querySelector("#profileOutput").addEventListener("click", evt => {
+    // delete entry
     if (evt.target.id.startsWith("delete")) {
-      // target posts id and delete it
       const id = evt.target.id.split("!")[1]
       profileDataManager.deleteEntries(id).then(() =>
         profileDomRender(activeUser)
@@ -28,6 +27,16 @@ const edProfile = (activeUser) => {
 
       })
 
+    }
+    // fav button
+    if (evt.target.id.startsWith("favBtn")) {
+      profileDataManager.FavEntry().then((entry) => {
+        const id = evt.target.id.split("!")[1]
+        const fav = {"favorite": true}
+        profileDataManager.FavEntry(fav, id).then(() => {
+          profileDomRender(activeUser)
+        })
+      })
     }
   })
 }
