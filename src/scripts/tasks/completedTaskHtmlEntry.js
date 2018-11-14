@@ -1,5 +1,5 @@
-//representation of DOM entries
-const taskHtmlEntry = (entry) => {
+//representation of completed DOM entries
+const completedTaskHtmlEntry = (entry) => {
   return `
   <div>
     <h3>${entry.task}</h3>
@@ -8,8 +8,8 @@ const taskHtmlEntry = (entry) => {
     <button id="delete!${entry.id}">Delete</button>
     <button id="editTask!${entry.id}">Edit</button>
     <input type="checkbox" name="completedTask" id="completeTask!${entry.id}"> 
-    <label id="checkboxLabel" for="completeTask!${entry.id}">All Done</label>
+    <label id="checkboxLabel" for="completeTask!${entry.id}">Redo Task</label>
   </div>`
 }
 
-export {taskHtmlEntry}
+export {completedTaskHtmlEntry}
