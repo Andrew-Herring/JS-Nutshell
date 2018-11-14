@@ -14,7 +14,6 @@ const profileFormManager = {
     <textarea rows="3" cols="20" name="About" id="about"></textarea><br>
     Secret:<br>
     <textarea rows="3" cols="20" type="text" name="Secret" id="secret"></textarea><br>
-    <input type="checkbox" name="jenna" id="checkbox">Are they a Jenna?<br>
     <button id="saveBtnProfile">Save Person</button>
     </div>`
   },
@@ -25,7 +24,6 @@ const profileFormManager = {
       document.querySelector("#city").value = ""
       document.querySelector("#about").value = ""
       document.querySelector("#secret").value = ""
-      document.querySelector("#checkbox").value = ""
     }
 }
 

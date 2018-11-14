@@ -5,7 +5,7 @@ import {profileDomRender} from "./profileDomRender"
 // saving contact entries
 const saveProfile = (activeUser) => {
   document.querySelector("#profileInput").addEventListener("click", (evt) => {
-    // create an entry consisting of contact, phone, city, about and secret fields
+    // create an entry consisting of contact, phone, city, about, and secret fields.  Also gives them a favorite status.
     const entry = {
       contact: document.querySelector("#contact").value,
       phone: document.querySelector("#phone").value,
