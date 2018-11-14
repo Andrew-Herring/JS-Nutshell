@@ -14,7 +14,8 @@ const saveArticles = (activeUser) => {
       url: document.querySelector("#articlesUrl").value,
       synopsis: document.querySelector("#articlesSynopsis").value,
       timestamp: timeStamp(),
-      completed: false
+      completed: false,
+      userId: (activeUser)
     }
     // Our one button within the articlesInput div serves two functions: to save a new entry and to edit an existing entry.  We use an if/else statement to differentiate between the two functions.  First, we look to see if the id of the button includes "save."
     if (evt.target.id.startsWith("saveArticles")) {
