@@ -11,7 +11,8 @@ const saveMessage = (activeUser) => {
 // variable message is getting the input value as a promise after the click
         const message = {
             content: document.querySelector("#content").value,
-            date: timeStamp()
+            date: timeStamp(),
+            userId: (activeUser)
         }
         if (evt.target.id.startsWith("sendBtn")) {
             if (!message.content){
