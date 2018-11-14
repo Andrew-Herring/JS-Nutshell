@@ -5,7 +5,7 @@ const url = "http://localhost:3000/articles"
 const articlesDataManager = {
   // getEntries function is retrieving all JSON objects and converting to JS.  The id variable is included so that objects are retrieved for the specific user id that is passed into the function.
   getEntries: (id) => {
-    return fetch(`${url}?userId=${id}`)
+    return fetch(`${url}?userId=${id}&completed=false`)
       .then(res => res.json())
   },
   // saveEntry function is used to post JS values to the JSON file.  Function converts JS values to JSON using stringify.  A promise is returned that converts JSON back to JS.
@@ -34,6 +34,16 @@ const articlesDataManager = {
       body: JSON.stringify(entry)
     }).then(res => res.json());
   },
+    // completedEntries uses the PATCH method to edit a json object containing a unique id. The id is passed over from the edit button in articlesHtmlEntry.js. A promise is returned that converts JSON back to JS.
+    completedEntry: (entry, id) => {
+      return fetch(`${url}/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+      }).then(res => res.json());
+    },
   // singleEntries retrieves one JSON object containing the targeted id passed over from the edit button in edArticles.js.
   singleEntry: (id) => {
     return fetch(`${url}/${id}`)
