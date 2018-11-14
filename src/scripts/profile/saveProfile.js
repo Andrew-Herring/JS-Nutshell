@@ -12,6 +12,7 @@ const saveProfile = (activeUser) => {
       city: document.querySelector("#city").value,
       about: document.querySelector("#about").value,
       secret: document.querySelector("#secret").value,
+      favorite: false,
       // make sure userId comes back as a number
       userId: parseInt(activeUser)
     }
