@@ -3,15 +3,15 @@ const articlesFormManager = {
 // htmlForm contains the literal HTML that will be passed to the DOM for input. Includes inputs and id's that will be later used to capture values and pass to JSON.
   htmlForm: () => {
     return `
-    <div>
+    <div class="form-group">
     <h2>Articles</h2>
     Title:<br>
-    <input type="text" name="Title" id="articlesTitle"><br>
+    <input type="text" class="form-control" name="Title" id="articlesTitle"><br>
     URL:<br>
-    <input type="url" name="URL" id="articlesUrl"><br>
+    <input type="url" class="form-control" name="URL" id="articlesUrl"><br>
     Synopsis:<br>
-    <textarea rows="4" cols="50" id="articlesSynopsis"></textarea><br>
-    <button id="saveArticlesBtn">Save</button>
+    <textarea rows="4" cols="50" class="form-control" id="articlesSynopsis"></textarea><br>
+    <button class="btn btn-primary" id="saveArticlesBtn">Save</button>
     </div>
     `
   },

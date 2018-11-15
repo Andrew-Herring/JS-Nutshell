@@ -21,7 +21,7 @@ const dashHtml = () => {
   </div>
   <div class="container" id="articles">
     <div id="articlesInput"></div>
-    <div id="articlesOutput"></div>
+    <div id="articlesOutput" class="d-flex justify-content-around"></div>
   </div>
   <div class="container" id="profile">
     <div id="profileInput"></div>
