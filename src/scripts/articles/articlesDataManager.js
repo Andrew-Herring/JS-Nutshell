@@ -34,7 +34,7 @@ const articlesDataManager = {
       body: JSON.stringify(entry)
     }).then(res => res.json());
   },
-    // completedEntries uses the PATCH method to edit a json object containing a unique id. The id is passed over from the completed checkbox in articlesHtmlEntry.js. A promise is returned that converts JSON back to JS.
+    // completedEntries uses the PATCH method to edit a json object containing a unique id. The id is passed over from the completed checkbox in articlesHtmlEntry.js.
     completedEntry: (entry, id) => {
       return fetch(`${url}/${id}`, {
         method: "PATCH",
