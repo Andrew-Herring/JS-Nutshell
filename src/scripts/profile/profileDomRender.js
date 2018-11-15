@@ -13,11 +13,11 @@ const profileDomRender = (activeUser) => {
       const entryHtml = htmlProfile(entry)
       dom(entryHtml)
       if (entry.favorite === true) {
-        document.querySelector("#fav").innerHTML = "Saved as Favorite"
+        document.querySelector("#fav").innerHTML = "Is a Jenna"
       }
       else {
         document.querySelector("#fav").innerHTML = ""
-      }
+    }  
     })
   })
 }
