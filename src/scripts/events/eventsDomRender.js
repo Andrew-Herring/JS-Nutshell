@@ -16,6 +16,7 @@ const eventsDomRender = (activeUser) => {
                 dom(entryHtml)
             })
         })
+
 }
 
 export {eventsDomRender}
