@@ -12,7 +12,8 @@ Date</br>
 <input type="date" name="Date" id="eventDate"><br>
 Location:<br>
 <input type="text" name="Location" id="location"><br>
-<button id="saveEventBtn">Save</button>
+<button id="saveEventBtn" class="btn btn-primary">Save</button>
+<button id="eventDateFilter" class="btn btn-primary"> Filter </button>
 </div>`
   },
   clearForm: () => {

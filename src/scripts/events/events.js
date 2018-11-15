@@ -2,6 +2,7 @@ import { eventsDomRender } from "./eventsDomRender"
 import { eventsFormHtml } from "./eventsFormHtml"
 import { edEvent } from "./eventsEditDelete"
 import { saveEvent } from "./saveEvent"
+import { filterEvent } from "./eventsFilter"
 
 const event = (activeUser) => {
   //below will display our form on the page
@@ -9,6 +10,7 @@ const event = (activeUser) => {
   eventsDomRender(activeUser)
   saveEvent(activeUser)
   edEvent(activeUser)
+  filterEvent(activeUser)
 }
 
 export {event}
