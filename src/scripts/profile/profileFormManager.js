@@ -14,7 +14,7 @@ const profileFormManager = {
     <textarea rows="3" cols="20" name="About" id="about"></textarea><br>
     Secret:<br>
     <textarea rows="3" cols="20" type="text" name="Secret" id="secret"></textarea><br>
-    <button id="saveBtnProfile">Save Person</button>
+    <button id="saveBtnProfile">Save</button>
     </div>`
   },
   // clears form after entry to avoid repeat entires
