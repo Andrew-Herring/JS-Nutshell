@@ -9,7 +9,7 @@ const taskHtmlEntry = (entry) => {
     <button id="delete!${entry.id}" class="btn btn-primary">Delete</button>
     <button id="editTask!${entry.id}" class="btn btn-primary">Edit</button>
     <input type="checkbox" name="completedTask" id="completeTask!${entry.id}"> 
-    <label id="checkboxLabel" for="completeTask!${entry.id}">Redo Task</label>
+    <label id="checkboxLabel" for="completeTask!${entry.id}">All Done</label>
   </div>  
   </div>`
 }
