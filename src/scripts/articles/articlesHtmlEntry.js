@@ -6,7 +6,7 @@ const articlesHtmlEntry = (entry) => {
   <h6>${entry.title}</h6>
   <a href ="${entry.url}">${entry.url}</a>
   <p>${entry.synopsis}</p>
-  <p>${entry.timestamp}</p>
+  <p>Added: ${entry.timestamp}</p>
   <button id="editArticles!${entry.id}">Edit</button>
   <button id="deleteArticles!${entry.id}">Delete</button></br>
   <input type="checkbox" name="completed" id="completedArticles!${entry.id}">  Completed<br>
