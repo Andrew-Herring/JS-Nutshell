@@ -10,10 +10,18 @@ const dashHtml = () => {
   </div>
   <div class="container" id="tasks">
     <div id="tasksInput"></div>
-    <h2>To Do</h2>
-    <div id="tasksOutput"></div>
-    <h2>Completed</h2>
-    <div id="tasksCompleted"></div>
+    <div class="card p-3 mb-2 bg-info text-white">
+      <div class="card-body ">
+        <h2>To Do</h2>
+        <div id="tasksOutput"></div>
+      </div>
+    </div>
+    <div class="card p-3 mb-2 bg-light text-dark">
+      <div class="card-body">
+        <h2>Completed</h2>
+        <div id="tasksCompleted"></div>
+      </div>
+    </div> 
   </div>
   <div class="container" id="events">
     <div id="eventsInput"></div>
